@@ -1,0 +1,34 @@
+.header {
+  padding: 29px 0 41px;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__nav {
+    width: 550px;
+  }
+
+  &__nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    li + li {
+      margin-left: 13px;
+    }
+  }
+
+  &__nav-link {
+    &--active {
+      font-weight: 700;
+    }
+  }
+
+  &__lang-select {
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}

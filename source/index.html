@@ -6,19 +6,146 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Lenta</title>
   <script src="js/picturefill.min.js" async="async"></script>
-  <link rel="preload" href="fonts/RobotoCondensed-Bold.woff2" as="font" crossorigin="anonymous" />
-  <link rel="preload" href="fonts/RobotoCondensed-Regular.woff2" as="font" crossorigin="anonymous" />
+  <link rel="preload" href="fonts/futura-pt-bold.woff2" as="font" crossorigin="anonymous" />
+  <link rel="preload" href="fonts/futura-pt-book.woff2" as="font" crossorigin="anonymous" />
   <link rel="stylesheet" href="css/style.min.css" />
 </head>
 
 <body class="body-index">
-
   <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a class="header__logo" href="#">
+          <svg  width='190' height='43'>
+            <use href='img/sprite/sprite.svg#logo'></use>
+          </svg>
+        </a>
 
+        <nav class="header__nav">
+          <ul class="header__nav-menu">
+            <li class="header__nav-item">
+              <a class="header__nav-link header__nav-link--active" href="#">О Лента</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">О проекте</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">Условия</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">Подать заявку</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+
+        <select class="header__lang-select">
+          <option>Eng</option>
+          <option>Ru</option>
+        </select>
+      </div>
+    </div>
   </header>
 
-  <footer class="footer">
+  <main class="main">
 
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__inner-left">
+          <a class="footer__logo" href="#">
+            <svg  width='256' height='59'>
+              <use href='img/sprite/sprite.svg#logo'></use>
+            </svg>
+          </a>
+          <ul class="footer__soclials">
+            <li class="footer__socials-item">
+              <a href="#" class="footer__socials-link">
+                <svg  width='27' height='27'>
+                <use href='img/sprite/sprite.svg#vk'></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer__socials-item">
+              <a href="#" class="footer__socials-link">
+                <svg  width='27' height='27'>
+                <use href='img/sprite/sprite.svg#facebook'></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer__socials-item">
+              <a href="#" class="footer__socials-link">
+                <svg  width='27' height='27'>
+                <use href='img/sprite/sprite.svg#instagram'></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer__socials-item">
+              <a href="#" class="footer__socials-link">
+                <svg  width='27' height='27'>
+                <use href='img/sprite/sprite.svg#odnoklassniki'></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer__socials-item">
+              <a href="#" class="footer__socials-link">
+                <svg  width='27' height='27'>
+                <use href='img/sprite/sprite.svg#telegram'></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer__socials-item">
+              <a href="#" class="footer__socials-link">
+                <svg  width='27' height='27'>
+                <use href='img/sprite/sprite.svg#viber'></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+          <ul class="footer__left-list">
+            <li class="footer__left-item">
+              <a class="footer__item-link" href="#">Сайт Лента для инвесторов</a>
+            </li>
+            <li class="footer__left-item">
+              <svg  width='24' height='24'>
+                  <use href='img/sprite/sprite.svg#folder'></use>
+              </svg>
+              <a class="footer__item-link" href="#">“Рекламные возможности “Лента” 2021”</a>
+            </li>
+            <li class="footer__left-item">
+              <svg  width='24' height='24'>
+                  <use href='img/sprite/sprite.svg#folder'></use>
+              </svg>
+              <a class="footer__item-link" href="#">“Маркетинговые опции для поставщиков “Лента” 2022”</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__inner-mid">
+          <div class="footer__mid-title">Bestseller Group:</div>
+          <ul class="footer__mid-list">
+            <li class="footer__mid-item">
+              <a class="footer__item-link" href="#">О проекте FoodTech Shelf</a>
+            </li>
+            <li class="footer__mid-item">
+              <a class="footer__item-link" href="#">Стать партнером проекта FoodTech Shelf</a>
+            </li>
+            <li class="footer__mid-item">
+              <a class="footer__item-link" href="#">Торговая платформа FoodTech Shelf</a>
+            </li>
+            <li class="footer__mid-item">
+              <a class="footer__item-link" href="#">Сайт Bestseller Group</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__inner-right">
+          В ходе взаимодействия со стартапами со стороны Bestseller Group может быть оказано содействие в анализе спроса, логистике, сертификации, локализации, кастомизации, финансировании и масштабировании производства.
+        </div>
+      </div>
+    </div>
   </footer>
 
   <script src="js/common.min.js"></script>
