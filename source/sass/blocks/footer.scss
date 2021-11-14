@@ -9,14 +9,31 @@
   }
 
   &__soclials {
+    margin: 27px 0 23px;
     display: flex;
     align-items: center;
+
+    li + li {
+      margin-left: 12px;
+    }
+  }
+
+  &__socials-item {
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    background-color: #07214B;
   }
 
   &__left-list {
     li + li {
       margin-top: 12px;
     }
+  }
+
+  &__left-item {
+    display: flex;
+    align-items: center;
   }
 
   &__mid-title {
@@ -28,6 +45,12 @@
     li + li {
       margin-top: 6px;
     }
+  }
+
+  &__folder-img {
+    margin-right: 12px;
+    width: 24px;
+    height: 24px;
   }
 
   &__item-link {

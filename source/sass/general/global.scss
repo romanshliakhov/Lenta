@@ -112,15 +112,49 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .container {
-  max-width: 1110px;
+  max-width: 1130px;
   padding: 0 10px;
   margin: 0 auto;
 }
 
 @media (min-width: 1000) and (max-width: 1600px) {
   .container {
-    max-width: 1110px;
+    max-width: 1130px;
     padding: 0 10px;
     margin: 0 auto;
   }
 }
+
+.inner {
+  padding: 90px 0;
+  text-align: center;
+}
+
+.title {
+  max-width: 680px;
+  font-size: 60px;
+  line-height: 77px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+
+  span {
+    color: #FFBA00;
+  }
+}
+
+.subtitle {
+  margin-bottom: 53px;
+  font-size: 48px;
+  line-height: 62px;
+  font-weight: 700;
+  color: #001E64;
+}
+
+.description {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+
