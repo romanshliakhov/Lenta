@@ -1,5 +1,9 @@
 .header {
+  position: fixed;
+  width: 100%;
   padding: 29px 0 41px;
+  background-color: #fff;
+  z-index: 100;
 
   &__inner {
     display: flex;

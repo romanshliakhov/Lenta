@@ -24,19 +24,20 @@
         <nav class="header__nav">
           <ul class="header__nav-menu">
             <li class="header__nav-item">
-              <a class="header__nav-link header__nav-link--active" href="#">О Лента</a>
+              <a class="header__nav-link" href="#lenta">О Лента</a>
+              <!-- <a class="header__nav-link header__nav-link--active" href="#lenta">О Лента</a> -->
             </li>
             <li class="header__nav-item">
-              <a class="header__nav-link" href="#">О проекте</a>
+              <a class="header__nav-link" href="#about">О проекте</a>
             </li>
             <li class="header__nav-item">
-              <a class="header__nav-link" href="#">Условия</a>
+              <a class="header__nav-link" href="#rules">Условия</a>
             </li>
             <li class="header__nav-item">
-              <a class="header__nav-link" href="#">Подать заявку</a>
+              <a class="header__nav-link" href="#apply">Подать заявку</a>
             </li>
             <li class="header__nav-item">
-              <a class="header__nav-link" href="#">Контакты</a>
+              <a class="header__nav-link" href="#contacts">Контакты</a>
             </li>
           </ul>
         </nav>
@@ -58,7 +59,7 @@
       </div>
     </section>
 
-    <section class="lenta" id="lenta" data-scrollspy="#lenta">
+    <section class="lenta" id="lenta">
       <div class="container">
         <div class="lenta__inner inner">
           <h2 class="subtitle">О Лента</h2>
@@ -97,7 +98,7 @@
       </div>
     </section>
 
-    <section class="about" id="about" data-scrollspy="#about">
+    <section class="about" id="about">
       <div class="container">
         <div class="about__inner inner">
           <h2 class="subtitle">О проекте</h2>
@@ -128,7 +129,7 @@
       </div>
     </section>
 
-    <section class="rules" id="rules" data-scrollspy="#rules">
+    <section class="rules" id="rules">
       <div class="container">
         <div class="rules__inner inner">
           <h2 class="subtitle">Условия</h2>
@@ -156,7 +157,7 @@
       </div>
     </section>
 
-    <section class="apply" id="apply" data-scrollspy="#apply">
+    <section class="apply" id="apply">
       <div class="container">
         <div class="apply__inner inner">
           <h2 class="subtitle">Подать заявку</h2>
@@ -178,7 +179,7 @@
                 <input type="email" name="email" value="" placeholder="E-mail" class="form__input" required>
               </label>
               <label class="form__label">
-                <input type="tel" name="tel" value="" placeholder="Телефон" class="form__input" required>
+                <input type="tel" name="tel" value="" placeholder="Телефон" class="form__input tel" required>
               </label>
               <label class="form__label">
                 <input type="text" name="country" value="" placeholder="Страна" class="form__input" required>
@@ -244,8 +245,7 @@
 
             <div class="form__upload">
               <label class="form__label-upload">
-                <input class="form__input-upload" type="file" name="file">
-                <span></span>
+                <input class="form__input-upload" type="file" name="file" id="upload" accept=".pdf, .jpg, .png, .ptt, .doc, .xls" multiple>
               </label>
               <div class="form__upload-descr">Прикрепить презентацию и прайс-лист (форматы: pdf, jpg, png, ppt, doc, xls. Не больше 30мб, количеством не более 20 файлов)</div>
             </div>
@@ -262,7 +262,7 @@
     </section>
   </main>
 
-  <footer class="footer">
+  <footer class="footer" id="contacts">
     <div class="container">
       <div class="footer__inner">
         <div class="footer__inner-left">
@@ -353,6 +353,8 @@
     </div>
   </footer>
 
+
+  <!-- <script src="js/filepond.min.js"></script> -->
   <script src="js/common.min.js"></script>
 </body>
 

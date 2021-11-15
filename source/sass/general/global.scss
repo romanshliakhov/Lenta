@@ -127,6 +127,8 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .inner {
   padding: 90px 0;
+  position: relative;
+  z-index: 5;
   text-align: center;
 }
 
