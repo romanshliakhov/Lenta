@@ -347,6 +347,10 @@
   .burger-menu {
     display: block;
   }
+
+  .mobile-menu.active {
+    transform: translateX(50%);
+  }
 }
 
 

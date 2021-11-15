@@ -1,35 +1,34 @@
 // scroll to section
-// const getId = (link) => link.getAttribute('href').replace('#','');
+const getId = (link) => link.getAttribute('href').replace('#','');
 
-// const observer = new IntersectionObserver((entries) => {
-//   entries.forEach((entry) => {
-//     if (entry.isIntersecting) {
-//       document.querySelectorAll('.header__nav-link').forEach((link) => {
-//         link.classList.toggle('header__nav-link--active',
-//           getId(link)  === entry.target.id
-//         );
-//       });
-//     }
-//   });
-// }, {
-//   threshold: 0.7,
-// });
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      document.querySelectorAll('.header__nav-link').forEach((link) => {
+        link.classList.toggle('header__nav-link--active',
+          getId(link)  === entry.target.id
+        );
+      });
+    }
+  });
+}, {
+  threshold: 0.7,
+});
 
-// document.querySelectorAll('.section').forEach(
-//   (section) => observer.observe(section),
-// );
+document.querySelectorAll('.section').forEach(
+  (section) => observer.observe(section),
+);
 
-// document.querySelector('.header__nav-menu').addEventListener('click', (event) => {
-//   if (event.target.classList.contains('.header__nav-link')) {
-//       event.preventDefault();
+document.querySelector('.header__nav-menu').addEventListener('click', (event) => {
+  if (event.target.classList.contains('.header__nav-link')) {
+      event.preventDefault();
 
-//     window.scrollTo({
-//       top: document.getElementById(getId(event.target)).offsetTop,
-//       behavior: "smooth",
-//     });
-//   }
-// });
-
+    window.scrollTo({
+      top: document.getElementById(getId(event.target)).offsetTop,
+      behavior: "smooth",
+    });
+  }
+});
 
 document.querySelectorAll('a.header__nav-link').forEach(link => {
   link.addEventListener('click', function (e) {
@@ -116,3 +115,32 @@ menuBtn.addEventListener('click', function(){
 	menuBtn.classList.toggle('active');
 	menu.classList.toggle('active');
 });
+
+
+// select
+let select = function () {
+  let selectHeader = document.querySelectorAll('.select__header');
+  let selectItem = document.querySelectorAll('.select__item');
+
+  selectHeader.forEach(item => {
+    item.addEventListener('click', selectToggle)
+  });
+
+  selectItem.forEach(item => {
+    item.addEventListener('click', selectChoose)
+  });
+
+  function selectToggle() {
+    this.parentElement.classList.toggle('is-active');
+  }
+
+  function selectChoose() {
+    let text = this.innerText,
+        select = this.closest('.select'),
+        currentText = select.querySelector('.select__current');
+    currentText.innerText = text;
+    select.classList.remove('is-active');
+  }
+};
+
+select();
