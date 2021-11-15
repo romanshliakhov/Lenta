@@ -62,11 +62,17 @@
     align-items: center;
     justify-content: start;
     padding-left: 34px;
+    cursor: pointer;
 
     &__nav-link--active {
       .header__nav-item {
         background-color: red !important;
       }
+    }
+
+    &:hover {
+      background-color: #F7F7F7;
+      cursor: pointer;
     }
   }
 }

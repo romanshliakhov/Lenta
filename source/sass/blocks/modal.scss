@@ -1,0 +1,118 @@
+.modal {
+	--transition-time: 0.3s;
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1000;
+	background: rgba(0, 30, 100, 0.9);
+  backdrop-filter: blur(10px);
+	overflow-y: auto;
+	overflow-x: hidden;
+	text-align: center;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity var(--transition-time), visibility var(--transition-time);
+}
+
+.modal::before {
+	content: '';
+	display: inline-block;
+	vertical-align: middle;
+	height: 100%;
+}
+
+.modal__container {
+	position: relative;
+	width: auto;
+	margin: 50px auto;
+	display: none;
+	vertical-align: middle;
+	background-color: #fff;
+	border-radius: 20px;
+	cursor: default;
+  text-align: center;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+}
+
+.modal.is-open {
+	opacity: 1;
+	visibility: visible;
+	transition: opacity var(--transition-time), visibility var(--transition-time);
+}
+
+.modal__container.modal-open {
+	display: inline-block;
+}
+
+.fade {
+	opacity: 0;
+	transition: opacity var(--transition-time);
+}
+
+.fade.animate-open {
+	opacity: 1;
+	transition: opacity var(--transition-time);
+}
+
+.fadeInUp {
+	opacity: 0;
+	transform: translateY(-100px);
+	transition: opacity var(--transition-time), transform var(--transition-time);
+}
+
+.fadeInUp.animate-open {
+	opacity: 1;
+	transform: translateY(0);
+	transition: opacity var(--transition-time), transform var(--transition-time);
+}
+
+.disable-scroll {
+	position: relative;
+	overflow: hidden;
+	height: 100vh;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+}
+
+.modal__close {
+  position: absolute;
+  top: 18px;
+  right: 21px;
+  width: 24px;
+  height: 24px;
+  font-size: 41px;
+  line-height: 21px;
+  color: #C4C4C4;
+  cursor: pointer;
+}
+
+.modal-content {
+  width: 350px;
+  height: 257px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal__content-checked {
+  margin-bottom: 24px;
+}
+
+.modal__text {
+  font-family: "Futura-PT", sans-serif;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #2D4693;
+}
+
+
+
+
+
