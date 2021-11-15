@@ -176,6 +176,10 @@
   .footer__inner-right {
     width: 100%;
   }
+
+  .burger-menu {
+    display: block;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 575px) {
@@ -338,6 +342,10 @@
 
   .footer__inner-right {
     width: 100%;
+  }
+
+  .burger-menu {
+    display: block;
   }
 }
 
