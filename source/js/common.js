@@ -1,22 +1,55 @@
 // scroll to section
-document.querySelectorAll('a.header__nav-link').forEach(link => {
-  link.addEventListener('click', function (e) {
-    e.preventDefault();
+const getId = (link) => link.getAttribute('href').replace('#','');
 
-    const href = this.getAttribute('href').substring(1);
-
-    const scrollTarget = document.getElementById(href);
-
-    const topOffset = 50;
-    const elementPosition = scrollTarget.getBoundingClientRect().top;
-    const offetPostion = elementPosition - topOffset;
-
-    window.scrollBy({
-      top: offetPostion,
-      behavior: "smooth"
-    });
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      document.querySelectorAll('.header__nav-link').forEach((link) => {
+        link.classList.toggle('header__nav-link--active',
+          getId(link)  === entry.target.id
+        );
+      });
+    }
   });
+}, {
+  threshold: 0.7,
 });
+
+document.querySelectorAll('.section').forEach(
+  (section) => observer.observe(section),
+);
+
+document.querySelector('.header__nav-menu').addEventListener('click', (event) => {
+  if (event.target.classList.contains('.header__nav-link')) {
+      event.preventDefault();
+
+    window.scrollTo({
+      top: document.getElementById(getId(event.target)).offsetTop,
+      behavior: "smooth",
+    });
+  }
+});
+
+
+// document.querySelectorAll('a.header__nav-link').forEach(link => {
+//   link.addEventListener('click', function (e) {
+//     e.preventDefault();
+
+//     const href = this.getAttribute('href').substring(1);
+
+//     const scrollTarget = document.getElementById(href);
+
+//     const topOffset = 50;
+//     const elementPosition = scrollTarget.getBoundingClientRect().top;
+//     const offetPostion = elementPosition - topOffset;
+
+//     window.scrollBy({
+//       top: offetPostion,
+//       behavior: "smooth"
+//     });
+//   });
+// });
+
 
 // upload validation
 const fileTypes = [
