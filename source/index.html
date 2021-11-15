@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="utf-8" />
@@ -58,11 +58,11 @@
       </div>
     </section>
 
-    <section class="lenta">
+    <section class="lenta" id="lenta" data-scrollspy="#lenta">
       <div class="container">
         <div class="lenta__inner inner">
           <h2 class="subtitle">О Лента</h2>
-          <div class="description">«Лента» (MOEX & LSE: LNTA) является крупнейшей сетью гипермаркетов в России и четвертой среди крупнейших розничных сетей страны по выручке</div>
+          <div class="description"><span>«Лента» (MOEX & LSE: LNTA) является крупнейшей сетью гипермаркетов в России и четвертой среди крупнейших розничных сетей страны по выручке</span></div>
           <ul class="lenta__numbers">
             <li class="lenta__numbers-item">
               <div class="lenta__numbers-descr">Активных покупателей<br> по карте лояльности</div>
@@ -97,11 +97,11 @@
       </div>
     </section>
 
-    <section class="about">
+    <section class="about" id="about" data-scrollspy="#about">
       <div class="container">
         <div class="about__inner inner">
           <h2 class="subtitle">О проекте</h2>
-          <div class="description">Мы ищем готовые инновационные продукты питания и напитки, обладающие новыми потребительскими свойствами.</div>
+          <div class="description">Мы ищем <span>готовые инновационные продукты питания и напитки</span>, обладающие новыми потребительскими свойствами.</div>
           <div class="about__lists">
             <ul class="about__edge">
               <li class="about__edge-item">Функциональная готовая еда</li>
@@ -127,6 +127,139 @@
         </div>
       </div>
     </section>
+
+    <section class="rules" id="rules" data-scrollspy="#rules">
+      <div class="container">
+        <div class="rules__inner inner">
+          <h2 class="subtitle">Условия</h2>
+          <ul class="rules__list">
+            <li class="rules__item">
+              <svg  width='122' height='122'>
+                <use href='img/sprite/sprite.svg#sweet'></use>
+              </svg>
+              <div class="rules__item-descr">Товары с уникальной рецептурой или инновационной упаковкой, которые не представлены в федеральных торговых сетях РФ. </div>
+            </li>
+            <li class="rules__item">
+              <svg  width='122' height='122'>
+                <use href='img/sprite/sprite.svg#like'></use>
+              </svg>
+              <div class="rules__item-descr">Наличие документов, подтверждающих качество товаров и достаточные производственные мощности для серийного производства</div>
+            </li>
+            <li class="rules__item">
+              <svg  width='122' height='122'>
+                <use href='img/sprite/sprite.svg#cart'></use>
+              </svg>
+              <div class="rules__item-descr">Готовность поставлять товар на склад “Лента” (для резидентов РФ) и осуществлять экспорт продукции в РФ (для нерезидентов РФ)</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="apply" id="apply" data-scrollspy="#apply">
+      <div class="container">
+        <div class="apply__inner inner">
+          <h2 class="subtitle">Подать заявку</h2>
+          <form class="apply__form form" action="">
+            <div class="form__labels">
+              <label class="form__label">
+                <input type="text" name="name" value="" placeholder="Имя" class="form__input" required>
+              </label>
+              <label class="form__label">
+                <input type="text" name="surname" value="" placeholder="Фамилия" class="form__input" required>
+              </label>
+              <label class="form__label">
+                <input type="text" name="organizations" value="" placeholder="Организация" class="form__input" required>
+              </label>
+              <label class="form__label">
+                <input type="text" name="instagram" value="" placeholder="Сайт или инстаграм" class="form__input" required>
+              </label>
+              <label class="form__label">
+                <input type="email" name="email" value="" placeholder="E-mail" class="form__input" required>
+              </label>
+              <label class="form__label">
+                <input type="tel" name="tel" value="" placeholder="Телефон" class="form__input" required>
+              </label>
+              <label class="form__label">
+                <input type="text" name="country" value="" placeholder="Страна" class="form__input" required>
+              </label>
+            </div>
+            <div class="form__quiz">
+              <div class="form__quiz-line">
+                <div class="form__quiz-question">Направлялось ли Вами ранее коммерческое предложение в Лента?</div>
+                <div class="form__quiz-answer">
+                  <label class="form__quiz-label">
+                    <input type="radio" class="form__quiz-input" name="choose" required>
+                    <span>Да</span>
+                  </label>
+                  <label class="form__quiz-label">
+                    <input type="radio" class="form__quiz-input" name="choose" required>
+                    <span>Нет</span>
+                  </label>
+                </div>
+              </div>
+              <div class="form__quiz-line">
+                <div class="form__quiz-question">Производство СТМ: </div>
+                <div class="form__quiz-answer">
+                  <label class="form__quiz-label">
+                    <input type="radio" class="form__quiz-input" name="choose1" required>
+                    <span>Да</span>
+                  </label>
+                  <label class="form__quiz-label">
+                    <input type="radio" class="form__quiz-input" name="choose1" required>
+                    <span>Нет</span>
+                  </label>
+                </div>
+              </div>
+              <div class="form__quiz-line">
+                <div class="form__quiz-question">Эксклюзив на 18 мес:</div>
+                <div class="form__quiz-answer">
+                  <label class="form__quiz-label">
+                    <input type="radio" class="form__quiz-input" name="choose2" required>
+                    <span>Да</span>
+                  </label>
+                  <label class="form__quiz-label">
+                    <input type="radio" class="form__quiz-input" name="choose2" required>
+                    <span>Нет</span>
+                  </label>
+                </div>
+              </div>
+              <div class="form__quiz-line">
+                <div class="form__quiz-question">Маркетинговая поддержка:</div>
+                <div class="form__quiz-answer">
+                  <label class="form__quiz-label">
+                    <input type="radio" class="form__quiz-input" name="choose3" required>
+                    <span>Да</span>
+                  </label>
+                  <label class="form__quiz-label">
+                    <input type="radio" class="form__quiz-input" name="choose3" required>
+                    <span>Нет</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form__descr">Готовность предоставить эксклюзив на 18 месяцев, обеспечить маркетинговую поддержку или поставлять продукцию под СТМ “Лента” будет являться существенным фактором при выборе поставщика
+            </div>
+
+            <div class="form__upload">
+              <label class="form__label-upload">
+                <input class="form__input-upload" type="file" name="file">
+                <span></span>
+              </label>
+              <div class="form__upload-descr">Прикрепить презентацию и прайс-лист (форматы: pdf, jpg, png, ppt, doc, xls. Не больше 30мб, количеством не более 20 файлов)</div>
+            </div>
+
+            <label class="form__label-confirm">
+              <input class="form__input-confirm" type="checkbox">
+              <span>Даю согласие на обработку данных согласно <a href="#">политике</a></span>
+            </label>
+
+            <button class="form__btn" type="submit">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
@@ -141,42 +274,42 @@
           <ul class="footer__soclials">
             <li class="footer__socials-item">
               <a href="#" class="footer__socials-link">
-                <svg  width='27' height='27'>
+                <svg  width='20' height='20'>
                 <use href='img/sprite/sprite.svg#vk'></use>
                 </svg>
               </a>
             </li>
             <li class="footer__socials-item">
               <a href="#" class="footer__socials-link">
-                <svg  width='27' height='27'>
+                <svg  width='20' height='20'>
                 <use href='img/sprite/sprite.svg#facebook'></use>
                 </svg>
               </a>
             </li>
             <li class="footer__socials-item">
               <a href="#" class="footer__socials-link">
-                <svg  width='27' height='27'>
+                <svg  width='24' height='24'>
                 <use href='img/sprite/sprite.svg#instagram'></use>
                 </svg>
               </a>
             </li>
             <li class="footer__socials-item">
               <a href="#" class="footer__socials-link">
-                <svg  width='27' height='27'>
+                <svg  width='24' height='24'>
                 <use href='img/sprite/sprite.svg#odnoklassniki'></use>
                 </svg>
               </a>
             </li>
             <li class="footer__socials-item">
               <a href="#" class="footer__socials-link">
-                <svg  width='27' height='27'>
+                <svg  width='22' height='22'>
                 <use href='img/sprite/sprite.svg#telegram'></use>
                 </svg>
               </a>
             </li>
             <li class="footer__socials-item">
               <a href="#" class="footer__socials-link">
-                <svg  width='27' height='27'>
+                <svg  width='22' height='22'>
                 <use href='img/sprite/sprite.svg#viber'></use>
                 </svg>
               </a>

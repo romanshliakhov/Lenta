@@ -23,6 +23,15 @@
     height: 27px;
     border-radius: 50%;
     background-color: #07214B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__socials-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   &__left-list {

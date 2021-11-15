@@ -154,7 +154,10 @@ input[type="search"]::-webkit-search-results-decoration {
 .description {
   font-size: 24px;
   line-height: 30px;
-  font-weight: 700;
+
+  span {
+    font-weight: 700;
+  }
 }
 
 
