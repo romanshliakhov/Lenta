@@ -191,41 +191,19 @@
     <section class="apply section" id="apply">
       <div class="container">
         <div class="apply__inner inner">
-          <h2 class="subtitle">Подать заявку</h2>
-          <form class="apply__form form">
+          <!-- <form class="apply__form form"  enctype="multipart/form-data">
             <div class="form__labels">
-              <label class="form__label">
-                <input type="text" name="name" placeholder="Имя" class="form__input">
-              </label>
-              <label class="form__label">
-                <input type="text" name="surname" placeholder="Фамилия" class="form__input">
-              </label>
-              <label class="form__label">
-                <input type="text" name="organizations" placeholder="Организация" class="form__input">
-              </label>
-              <label class="form__label">
-                <input type="text" name="instagram" placeholder="Сайт или инстаграм" class="form__input">
-              </label>
-              <label class="form__label">
-                <input type="email" name="email" placeholder="E-mail" class="form__input">
-              </label>
-              <label class="form__label">
-                <input type="tel" name="tel" placeholder="Телефон" class="form__input">
-              </label>
-              <label class="form__label">
-                <input type="text" name="country" placeholder="Страна" class="form__input">
-              </label>
-            </div>
+
             <div class="form__quiz">
               <div class="form__quiz-line">
                 <div class="form__quiz-question">Направлялось ли Вами ранее коммерческое предложение в Лента?</div>
                 <div class="form__quiz-answer">
                   <label class="form__quiz-label">
-                    <input type="radio" class="form__quiz-input" name="choose" required>
+                    <input type="radio" class="form__quiz-input" name="choose" data-validate-field="radio">
                     <span>Да</span>
                   </label>
                   <label class="form__quiz-label">
-                    <input type="radio" class="form__quiz-input" name="choose" required>
+                    <input type="radio" class="form__quiz-input" name="choose" data-validate-field="radio">
                     <span>Нет</span>
                   </label>
                 </div>
@@ -234,11 +212,11 @@
                 <div class="form__quiz-question">Производство СТМ: </div>
                 <div class="form__quiz-answer">
                   <label class="form__quiz-label">
-                    <input type="radio" class="form__quiz-input" name="choose1" required>
+                    <input type="radio" class="form__quiz-input" name="choose1" data-validate-field="radio">
                     <span>Да</span>
                   </label>
                   <label class="form__quiz-label">
-                    <input type="radio" class="form__quiz-input" name="choose1" required>
+                    <input type="radio" class="form__quiz-input" name="choose1" data-validate-field="radio">
                     <span>Нет</span>
                   </label>
                 </div>
@@ -247,11 +225,11 @@
                 <div class="form__quiz-question">Эксклюзив на 18 мес:</div>
                 <div class="form__quiz-answer">
                   <label class="form__quiz-label">
-                    <input type="radio" class="form__quiz-input" name="choose2" required>
+                    <input type="radio" class="form__quiz-input" name="choose2" data-validate-field="radio">
                     <span>Да</span>
                   </label>
                   <label class="form__quiz-label">
-                    <input type="radio" class="form__quiz-input" name="choose2" required>
+                    <input type="radio" class="form__quiz-input" name="choose2" data-validate-field="radio">
                     <span>Нет</span>
                   </label>
                 </div>
@@ -260,33 +238,122 @@
                 <div class="form__quiz-question">Маркетинговая поддержка:</div>
                 <div class="form__quiz-answer">
                   <label class="form__quiz-label">
-                    <input type="radio" class="form__quiz-input" name="choose3" required>
+                    <input type="radio" class="form__quiz-input" name="choose3" data-validate-field="radio">
                     <span>Да</span>
                   </label>
                   <label class="form__quiz-label">
-                    <input type="radio" class="form__quiz-input" name="choose3" required>
+                    <input type="radio" class="form__quiz-input" name="choose3" data-validate-field="radio">
                     <span>Нет</span>
                   </label>
                 </div>
               </div>
             </div>
 
-            <div class="form__descr">Готовность предоставить эксклюзив на 18 месяцев, обеспечить маркетинговую поддержку или поставлять продукцию под СТМ “Лента” будет являться существенным фактором при выборе поставщика
-            </div>
+
 
             <div class="form__upload">
               <label class="form__label-upload">
-                <input class="form__input-upload" type="file" name="file" id="upload" accept=".pdf, .jpg, .png, .ptt, .doc, .xls" multiple>
+                <input class="form__input-upload" type="file" name="file[]" multiple>
               </label>
               <div class="form__upload-descr">Прикрепить презентацию и прайс-лист (форматы: pdf, jpg, png, ppt, doc, xls. Не больше 30мб, количеством не более 20 файлов)</div>
+            </div>
+          </form> -->
+
+          <form action="mail.php" enctype="multipart/form-data" class="apply__form form" method="POST">
+            <input type="hidden" name="admin_email[]" value="maxgraph23@gmail.com">
+            <input type="hidden" name="form_subject" value="Тема письма">
+            <h2 class="subtitle">Подать заявку</h2>
+            <div class="form__labels">
+              <label class="form__label">
+                <input type="text" name="surname" placeholder="Имя" class="form__input" data-validate-field="name">
+              </label>
+              <label class="form__label">
+                <input type="text" name="surname" placeholder="Фамилия" class="form__input" data-validate-field="surname">
+              </label>
+              <label class="form__label">
+                <input type="text" name="organizations" placeholder="Организация" class="form__input" data-validate-field="text">
+              </label>
+              <label class="form__label">
+                <input type="text" name="instagram" placeholder="Сайт или инстаграм" class="form__input" data-validate-field="instagram">
+              </label>
+              <label class="form__label">
+                <input type="email" name="email" placeholder="E-mail" class="form__input" class="form__input" data-validate-field="email">
+              </label>
+              <label class="form__label">
+                <input type="tel" name="tel" placeholder="Телефон" class="form__input" data-validate-field="tel">
+              </label>
+              <label class="form__label">
+                <input type="text" name="country" placeholder="Страна" class="form__input" data-validate-field="country">
+              </label>
+            </div>
+
+            <div class="form__quiz">
+              <div class="form__quiz-line">
+                <div class="form__quiz-question">Направлялось ли Вами ранее коммерческое предложение в Лента?</div>
+                <div class="form__quiz-answer">
+                  <label class="form__quiz-label">
+                    <input type="radio" class="form__quiz-input" name="choose" data-validate-field="radio" required>
+                    <span>Да</span>
+                  </label>
+                  <label class="form__quiz-label">
+                    <input type="radio" class="form__quiz-input" name="choose" data-validate-field="radio" required>
+                    <span>Нет</span>
+                  </label>
+                </div>
+              </div>
+              <div class="form__quiz-line">
+                <div class="form__quiz-question">Производство СТМ: </div>
+                <div class="form__quiz-answer">
+                  <label class="form__quiz-label">
+                    <input type="radio" class="form__quiz-input" name="choose1" data-validate-field="radio" required>
+                    <span>Да</span>
+                  </label>
+                  <label class="form__quiz-label">
+                    <input type="radio" class="form__quiz-input" name="choose1" data-validate-field="radio" required>
+                    <span>Нет</span>
+                  </label>
+                </div>
+              </div>
+              <div class="form__quiz-line">
+                <div class="form__quiz-question">Эксклюзив на 18 мес:</div>
+                <div class="form__quiz-answer">
+                  <label class="form__quiz-label">
+                    <input type="radio" class="form__quiz-input" name="choose2" data-validate-field="radio" required>
+                    <span>Да</span>
+                  </label>
+                  <label class="form__quiz-label">
+                    <input type="radio" class="form__quiz-input" name="choose2" data-validate-field="radio" required>
+                    <span>Нет</span>
+                  </label>
+                </div>
+              </div>
+              <div class="form__quiz-line">
+                <div class="form__quiz-question">Маркетинговая поддержка:</div>
+                <div class="form__quiz-answer">
+                  <label class="form__quiz-label">
+                    <input type="radio" class="form__quiz-input" name="choose3" data-validate-field="radio" required>
+                    <span>Да</span>
+                  </label>
+                  <label class="form__quiz-label">
+                    <input type="radio" class="form__quiz-input" name="choose3" data-validate-field="radio" required>
+                    <span>Нет</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <label class="form__label file-label">
+              <input type="file" name="file[]" multiple>
+            </label>
+
+            <div class="form__descr">Готовность предоставить эксклюзив на 18 месяцев, обеспечить маркетинговую поддержку или поставлять продукцию под СТМ “Лента” будет являться существенным фактором при выборе поставщика
             </div>
 
             <label class="form__label-confirm">
               <input class="form__input-confirm" type="checkbox" onchange="document.getElementById('submit').disabled = !this.checked;">
               <div class="form__confirm-terms">Нажимая кнопку «Отправить», я даю свое согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных в <button data-path="policy" data-animation="fade" data-speed="300" type="button">Политике обработки персональных данных</button></div>
             </label>
-
-            <button class="form__btn" type="submit" disabled="disabled" name="submit" id="submit">Отправить</button>
+            <button class="form__btn" disabled type="submit" id="submit">Отправить</button>
           </form>
         </div>
       </div>
@@ -457,6 +524,7 @@
 	</div>
 
   <script src="js/inputmask.min.js"></script>
+  <script src="js/just-validate.min.js"></script>
   <script src="js/common.min.js"></script>
 </body>
 
