@@ -53,6 +53,21 @@
     padding: 0 15px;
   }
 
+  .modal__container {
+    width: 90%;
+  }
+
+  .modal__policy {
+    width: 100%;
+    height: auto;
+    padding: 55px 30px;
+  }
+
+  .modal__policy-title {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
   .main::before {
     display: none;
   }
@@ -99,11 +114,34 @@
     padding: 0 33px;
   }
 
+  .modal__container {
+    width: 90%;
+  }
+
+  .modal__policy-title {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .modal__container-confirm {
+    width: 350px;
+  }
+
+  .modal__policy {
+    width: 100%;
+    height: auto;
+    padding: 55px 21px;
+  }
+
   .title {
     font-size: 48px;
     line-height: 61px;
     max-width: 470px;
     margin: 0 auto;
+  }
+
+  .inner {
+    padding: 60px 0;
   }
 
   .main::before {
@@ -140,10 +178,38 @@
 
   .lenta__numbers {
     margin-top: 45px;
+    justify-content: start;
+    flex-flow: wrap;
   }
 
   .lenta__numbers-item {
-    width: 240px;
+    width: 255px;
+    margin-bottom: 45px;
+
+    &:first-child,
+    &:nth-child(2) {
+      order: -1;
+    }
+
+    &:nth-child(3) {
+      order: 1;
+    }
+
+    &:nth-child(4) {
+      order: 0;
+    }
+
+    &:nth-child(5) {
+      order: -1;
+    }
+
+    &:nth-child(6) {
+      order: 1;
+    }
+
+    &:last-child {
+      order: 1;
+    }
   }
 
   .rules__list {
@@ -233,9 +299,28 @@
     padding: 0 15px;
   }
 
+  .modal__container {
+    width: 90%;
+  }
+
+  .modal__policy-title {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .modal__policy {
+    width: 100%;
+    height: auto;
+    padding: 55px 5px;
+  }
+
+  .modal__confirm {
+    width: 100%;
+  }
+
   .title {
-    font-size: 25px;
-    line-height: 32px;
+    font-size: 30px;
+    line-height: 40px;
     max-width: 100%;
     margin: 0 auto;
   }
@@ -295,8 +380,39 @@
     }
   }
 
+  .lenta__numbers {
+    margin-top: 45px;
+    flex-flow: wrap;
+  }
+
   .lenta__numbers-item {
     width: 240px;
+    margin-bottom: 45px;
+
+    &:first-child,
+    &:nth-child(2) {
+      order: -1;
+    }
+
+    &:nth-child(3) {
+      order: 1;
+    }
+
+    &:nth-child(4) {
+      order: 0;
+    }
+
+    &:nth-child(5) {
+      order: -1;
+    }
+
+    &:nth-child(6) {
+      order: 1;
+    }
+
+    &:last-child {
+      order: 1;
+    }
   }
 
   .rules__list {
@@ -339,10 +455,6 @@
     margin-right: 20px;
   }
 
-  .form__upload-descr {
-    max-width: 180px;
-  }
-
   .form__quiz-answer {
     min-width: 107px;
   }
@@ -382,8 +494,25 @@
     }
   }
 
+  .footer__left-item {
+    width: 100%;
+    text-align: left;
+
+    &:first-child {
+      .footer__item-link {
+        justify-content: center;
+      }
+    }
+  }
+
   .footer__inner-mid {
     margin: 60px 0;
+  }
+
+  .footer__mid-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .footer__inner-right {
