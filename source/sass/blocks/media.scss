@@ -88,6 +88,10 @@
   .burger-menu {
     display: block;
   }
+
+  .mobile-menu.active {
+    height: 522px;
+  }
 }
 
 @media (min-width: 576px) and (max-width: 768px) {
@@ -213,6 +217,10 @@
 
   .burger-menu {
     display: block;
+  }
+
+  .mobile-menu.active {
+    height: 522px;
   }
 }
 
@@ -392,6 +400,10 @@
 
   .modal-content {
     width: 100%;
+  }
+
+  .mobile-menu.active {
+    height: 347px;
   }
 }
 

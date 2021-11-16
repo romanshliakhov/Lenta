@@ -1,7 +1,9 @@
 .select {
 	position: relative;
 	width: 50px;
+  margin-top: 4px;
 }
+
 .select.is-active .select__body {
 	display: block;}
 
@@ -9,6 +11,7 @@
 	cursor: pointer;
 	display: flex;
 }
+
 .select__current {
 	font-size: 18px;
 	line-height: 24px;
