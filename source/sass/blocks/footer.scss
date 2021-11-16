@@ -2,6 +2,11 @@
   background-color: #003C96;
   padding: 98px 0;
 
+  &__logo:hover {
+    transform: translateX(15px);
+    transition-duration: 1s;
+  }
+
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -46,7 +51,16 @@
     }
   }
 
-  &__left-item {
+  &__item-link {
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &__left-link {
     display: flex;
     align-items: center;
   }
