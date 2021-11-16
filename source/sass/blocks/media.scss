@@ -102,7 +102,7 @@
   .title {
     font-size: 48px;
     line-height: 61px;
-    max-width: 510px;
+    max-width: 470px;
     margin: 0 auto;
   }
 
@@ -136,6 +136,10 @@
   .about__edge+.about__edge {
     margin-top: 27px;
     margin-left: 0;
+  }
+
+  .lenta__numbers {
+    margin-top: 45px;
   }
 
   .lenta__numbers-item {
@@ -220,7 +224,7 @@
   }
 
   .mobile-menu.active {
-    height: 522px;
+    height: 567px;
   }
 }
 
