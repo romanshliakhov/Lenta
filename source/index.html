@@ -282,11 +282,11 @@
             </div>
 
             <label class="form__label-confirm">
-              <input class="form__input-confirm" type="checkbox">
-              <span>Даю согласие на обработку данных согласно <a href="#">политике</a></span>
+              <input class="form__input-confirm" type="checkbox" onchange="document.getElementById('submit').disabled = !this.checked;">
+              <span>Нажимая кнопку «Отправить», я даю свое согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных в<button data-path="policy" data-animation="fade" data-speed="300" type="button">Политике обработки персональных данных</button></span>
             </label>
 
-            <button class="form__btn" type="submit">Отправить</button>
+            <button class="form__btn" type="submit" disabled="disabled" name="submit" id="submit">Отправить</button>
           </form>
         </div>
       </div>
@@ -390,6 +390,16 @@
 
   <div class="modal">
 		<div class="modal__container" data-target="confirm">
+			<div class="modal-content">
+        <div class="modal__close modal-close">&times;</div>
+        <svg class="modal__content-checked" width='75' height='75'>
+          <use href='img/sprite/sprite.svg#checked'></use>
+        </svg>
+				<div class="modal__text">Ваша заявка принята!</div>
+			</div>
+		</div>
+
+    <div class="modal__container" data-target="policy">
 			<div class="modal-content">
         <div class="modal__close modal-close">&times;</div>
         <svg class="modal__content-checked" width='75' height='75'>

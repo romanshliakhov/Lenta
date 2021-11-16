@@ -12,13 +12,14 @@
   }
 
   &__nav {
-    width: 550px;
+    width: 700px;
   }
 
   &__nav-menu {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    text-align: center;
 
     li + li {
       margin-left: 13px;
@@ -26,9 +27,12 @@
   }
 
   &__nav-link {
+    width: 135px;
+
     &--active,
     &:hover {
       font-weight: 700;
+      transition: 0.5s ease-in-out 0.3;
     }
   }
 

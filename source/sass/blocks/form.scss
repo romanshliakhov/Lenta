@@ -74,8 +74,12 @@
       margin-right: 19px;
     }
 
-    a {
+    button {
       text-decoration: underline;
+
+      &:hover {
+        color: #000;
+      }
     }
   }
 
@@ -140,5 +144,9 @@
     overflow: hidden;
     position: absolute;
     z-index: -1;
+  }
+
+  &__btn:disabled {
+    opacity: 0.5;
   }
 }

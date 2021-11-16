@@ -225,7 +225,6 @@ class Modal {
           this.modalContainer.classList.add('animate-open');
           this.options.onOpen(this);
           this.isOpen = true;
-          this.focusTrap();
       }, this.speed);
   }
 
@@ -239,7 +238,6 @@ class Modal {
           this.enableScroll();
           this.options.onClose(this);
           this.isOpen = false;
-          this.focusTrap();
       }
   }
 
@@ -264,7 +262,6 @@ class Modal {
       if (this.isOpen) {
           focusable[0].focus();
       } else {
-          this.previousActiveElement.focus();
       }
   }
 
