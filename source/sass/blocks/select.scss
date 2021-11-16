@@ -13,6 +13,12 @@
 	font-size: 18px;
 	line-height: 24px;
   text-transform: uppercase;
+
+  &:hover {
+    transform: scale(1.1);
+    opacity: 0.75;
+    transition: 0.3s ease-in-out;
+  }
 }
 
 .select__body {
@@ -28,4 +34,10 @@
 	font-size: 18px;
 	line-height: 24px;
   text-transform: uppercase;
+
+  &:hover {
+    transform: scale(1.1);
+    opacity: 0.75;
+    transition: 0.3s ease-in-out;
+  }
 }

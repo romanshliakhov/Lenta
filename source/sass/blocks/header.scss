@@ -26,7 +26,8 @@
   }
 
   &__nav-link {
-    &--active {
+    &--active,
+    &:hover {
       font-weight: 700;
     }
   }

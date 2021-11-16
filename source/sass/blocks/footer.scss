@@ -60,6 +60,12 @@
     margin-right: 12px;
     width: 24px;
     height: 24px;
+    transition: all 0.5s ease 0s;
+    transition-duration: 0.8s;
+
+    &:hover {
+      transform: translate(0px, 8px);
+    }
   }
 
   &__item-link {
