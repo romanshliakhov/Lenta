@@ -122,6 +122,12 @@
     width: 90%;
   }
 
+  .modal__policy {
+    width: 100%;
+    height: auto;
+    padding: 55px 25px;
+  }
+
   .modal__policy-title {
     font-size: 24px;
     line-height: 30px;
@@ -172,6 +178,11 @@
   .about__edge+.about__edge {
     margin-top: 27px;
     margin-left: 0;
+  }
+
+  .lenta__numbers-descr {
+    min-height: 90px;
+    margin-bottom: 0;
   }
 
   .lenta__numbers {
@@ -308,7 +319,7 @@
   .modal__policy {
     width: 100%;
     height: auto;
-    padding: 55px 5px;
+    padding: 55px 15px;
   }
 
   .modal__confirm {
