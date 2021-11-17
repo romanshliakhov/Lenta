@@ -104,10 +104,6 @@
     display: block;
   }
 
-  .mobile-menu.active {
-    height: 522px;
-  }
-
   .form__confirm-terms {
     font-size: 17px;
   }
@@ -133,12 +129,6 @@
 
   .modal__container-confirm {
     width: 350px;
-  }
-
-  .modal__policy {
-    width: 100%;
-    height: auto;
-    padding: 55px 21px;
   }
 
   .title {
@@ -315,11 +305,6 @@
     width: 90%;
   }
 
-  .modal__policy-title {
-    font-size: 24px;
-    line-height: 30px;
-  }
-
   .modal__policy {
     width: 100%;
     height: auto;
@@ -331,8 +316,8 @@
   }
 
   .title {
-    font-size: 30px;
-    line-height: 40px;
+    font-size: 48px;
+    line-height: 62px;
     max-width: 100%;
     margin: 0 auto;
   }
