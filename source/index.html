@@ -274,11 +274,19 @@
               </div>
             </div>
 
-            <div class="form__upload file-label">
-              <label class="form__label-upload">
-                <input class="form__input-upload" type="file" accept=".pdf, .jpg, .png, .ppt, .doc, .xls" name="file[]" multiple>
-              </label>
-              <div class="form__upload-descr">Прикрепить презентацию и прайс-лист (форматы: pdf, jpg, png, ppt, doc, xls. Не больше 30мб, количеством не более 20 файлов)</div>
+            <div class="form__upload">
+              <div class="form__item">
+                <div class="file">
+                  <div class="file__item">
+                    <input type="file" name="file" class="file__input" accept=".pdf, .jpg, .png, .ppt, .doc, .xls" id="upload" multiple>
+                    <div class="file__btn"></div>
+                    <div class="file__preview" id="formPreview">
+
+                    </div>
+                  </div>
+                </div>
+                <div class="form__label-test form__upload-descr">Прикрепить презентацию и прайс-лист (форматы: pdf, jpg, png, ppt, doc, xls. Не больше 30мб, количеством не более 20 файлов)</div>
+              </div>
             </div>
 
             <div class="form__descr">Готовность предоставить эксклюзив на 18 месяцев, обеспечить маркетинговую поддержку или поставлять продукцию под СТМ “Лента” будет являться существенным фактором при выборе поставщика

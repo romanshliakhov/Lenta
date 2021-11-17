@@ -49,27 +49,6 @@ document.querySelectorAll('a.header__nav-link').forEach(link => {
   });
 });
 
-
-// upload validation
-const fileTypes = [
-  '.pdf',
-  '.jpg',
-  '.png',
-  '.ptt',
-  '.doc',
-  '.xls'
-];
-
-function validFileType(file) {
-  for (var i = 0; i < fileTypes.length; i++) {
-    if (file.type === fileTypes[i]) {
-      return true;
-    }
-  }
-
-  return false;
-}
-
 // burger
 let menuBtn = document.querySelector('.burger-menu');
 let menu = document.querySelector('.mobile-menu');
@@ -278,33 +257,6 @@ im.mask(selector);
 // input validate
 let selector2 = document.querySelector('input[type="tel"]');
 
-selector2.addEventListener('input', function(){
-	console.log(selector2.value);
-
-
-	const re = /^\d*(\.\d+)?$/;
-
-	console.log(selector2.value.match(/[0-9]/g).length);
-
-
-	console.log(selector2.value.replace(/[0-9]/g, "0"));
-
-});
-
-const fileInput = document.querySelector('input[type="file"]');
-
-fileInput.addEventListener('change', (e) => {
-	let files = e.currentTarget.files;
-	console.log(files);
-
-	if (files.length) {
-		fileInput.closest('label').querySelector('span').textContent = files[0].name;
-	} else {
-		fileInput.closest('label').querySelector('span').textContent = 'Прикрепить файл';
-	}
-
-});
-
 let validateForms = function(selector, rules, successModal, yaGoal) {
 	new window.JustValidate(selector, {
 		rules: rules,
@@ -325,10 +277,50 @@ let validateForms = function(selector, rules, successModal, yaGoal) {
 			xhr.send(formData);
 
 			form.reset();
-
-			fileInput.closest('label').querySelector('span').textContent = 'Прикрепить файл';
 		}
 	});
 };
 
 validateForms('.form', { email: {required: true, email: true}, tel: {required: true}, surname: {required: true}, instagram: {required: true}, country: {required: true}, radio: {required: true} }, '.thanks-popup', 'send goal');
+
+// upload validation
+
+const formUpload = document.getElementById('upload');
+const formPreview = document.getElementById('formPreview');
+
+formUpload.addEventListener('change', () => {
+  uploadFile(formUpload.files[0]);
+
+  function uploadFile(file) {
+    if (!['image/jpeg', 'image/png', 'application/pdf', 'application/powerpoint', 'application/msword', 'application/vnd.ms-excel' ].includes(file.type)) {
+      alert('Разрешены только .jpeg, .png, .pdf, .ppt, .doc, .xls');
+      formUpload.value = '';
+      return;
+    }
+
+    if (file.size > 2 * 1024 * 1024 ) {
+      alert('Файлы не более 30мб');
+      return;
+    }
+
+    console.log('test1');
+
+    if (file.length > 2) {
+      alert(`Only 20 files are allowed to upload.`);
+      return;
+    }
+
+    console.log('test2');
+
+    let reader = new FileReader();
+
+    reader.onload = function (e) {
+      formPreview.innerHTML = `<img src="${e.target.result}" alt="Photo">`;
+    };
+    reader.onerror = function (e) {
+      alert('Error');
+    };
+    reader.readAsDataURL(file);
+  }
+});
+
