@@ -191,74 +191,6 @@
     <section class="apply section" id="apply">
       <div class="container">
         <div class="apply__inner inner">
-          <!-- <form class="apply__form form"  enctype="multipart/form-data">
-            <div class="form__labels">
-
-            <div class="form__quiz">
-              <div class="form__quiz-line">
-                <div class="form__quiz-question">Направлялось ли Вами ранее коммерческое предложение в Лента?</div>
-                <div class="form__quiz-answer">
-                  <label class="form__quiz-label">
-                    <input type="radio" class="form__quiz-input" name="choose" data-validate-field="radio">
-                    <span>Да</span>
-                  </label>
-                  <label class="form__quiz-label">
-                    <input type="radio" class="form__quiz-input" name="choose" data-validate-field="radio">
-                    <span>Нет</span>
-                  </label>
-                </div>
-              </div>
-              <div class="form__quiz-line">
-                <div class="form__quiz-question">Производство СТМ: </div>
-                <div class="form__quiz-answer">
-                  <label class="form__quiz-label">
-                    <input type="radio" class="form__quiz-input" name="choose1" data-validate-field="radio">
-                    <span>Да</span>
-                  </label>
-                  <label class="form__quiz-label">
-                    <input type="radio" class="form__quiz-input" name="choose1" data-validate-field="radio">
-                    <span>Нет</span>
-                  </label>
-                </div>
-              </div>
-              <div class="form__quiz-line">
-                <div class="form__quiz-question">Эксклюзив на 18 мес:</div>
-                <div class="form__quiz-answer">
-                  <label class="form__quiz-label">
-                    <input type="radio" class="form__quiz-input" name="choose2" data-validate-field="radio">
-                    <span>Да</span>
-                  </label>
-                  <label class="form__quiz-label">
-                    <input type="radio" class="form__quiz-input" name="choose2" data-validate-field="radio">
-                    <span>Нет</span>
-                  </label>
-                </div>
-              </div>
-              <div class="form__quiz-line">
-                <div class="form__quiz-question">Маркетинговая поддержка:</div>
-                <div class="form__quiz-answer">
-                  <label class="form__quiz-label">
-                    <input type="radio" class="form__quiz-input" name="choose3" data-validate-field="radio">
-                    <span>Да</span>
-                  </label>
-                  <label class="form__quiz-label">
-                    <input type="radio" class="form__quiz-input" name="choose3" data-validate-field="radio">
-                    <span>Нет</span>
-                  </label>
-                </div>
-              </div>
-            </div>
-
-
-
-            <div class="form__upload">
-              <label class="form__label-upload">
-                <input class="form__input-upload" type="file" name="file[]" multiple>
-              </label>
-              <div class="form__upload-descr">Прикрепить презентацию и прайс-лист (форматы: pdf, jpg, png, ppt, doc, xls. Не больше 30мб, количеством не более 20 файлов)</div>
-            </div>
-          </form> -->
-
           <form action="mail.php" enctype="multipart/form-data" class="apply__form form" method="POST">
             <input type="hidden" name="admin_email[]" value="maxgraph23@gmail.com">
             <input type="hidden" name="form_subject" value="Тема письма">
@@ -342,9 +274,12 @@
               </div>
             </div>
 
-            <label class="form__label file-label">
-              <input type="file" name="file[]" multiple>
-            </label>
+            <div class="form__upload file-label">
+              <label class="form__label-upload">
+                <input class="form__input-upload" type="file" accept=".pdf, .jpg, .png, .ppt, .doc, .xls" name="file[]" multiple>
+              </label>
+              <div class="form__upload-descr">Прикрепить презентацию и прайс-лист (форматы: pdf, jpg, png, ppt, doc, xls. Не больше 30мб, количеством не более 20 файлов)</div>
+            </div>
 
             <div class="form__descr">Готовность предоставить эксклюзив на 18 месяцев, обеспечить маркетинговую поддержку или поставлять продукцию под СТМ “Лента” будет являться существенным фактором при выборе поставщика
             </div>
