@@ -27,6 +27,20 @@
     display: none;
   }
 
+  .container {
+    padding: 0 20px;
+  }
+
+  .modal__container {
+    width: 90%;
+  }
+
+  .modal__policy {
+    width: 100%;
+    height: auto;
+    padding: 55px 30px;
+  }
+
   .first__inner::after {
     display: none;
   }
@@ -187,8 +201,8 @@
 
   .lenta__numbers {
     margin-top: 45px;
-    justify-content: start;
     flex-flow: wrap;
+    justify-content: center;
   }
 
   .lenta__numbers-item {
@@ -305,6 +319,12 @@
   .form__confirm-terms {
     font-size: 16px;
   }
+
+  .footer__mid-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 575px) {
@@ -369,6 +389,7 @@
   .about__lists {
     flex-direction: column;
     justify-content: center;
+    margin: 43px 0;
   }
 
   .about__edge {
@@ -557,6 +578,7 @@
 
   .form__item {
     align-items: center;
+    justify-content: space-evenly;
   }
 
   .form__upload-descr {
