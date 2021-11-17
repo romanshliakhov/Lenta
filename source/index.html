@@ -1,26 +1,474 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="theme-color" content="#111111">
-  <title>New site</title>
-  <link rel="stylesheet" href="css/vendor.css">
-  <link rel="stylesheet" href="css/main.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Lenta</title>
+  <script src="js/picturefill.min.js" async="async"></script>
+  <link rel="preload" href="fonts/futura-pt-bold.woff2" as="font" crossorigin="anonymous" />
+  <link rel="preload" href="fonts/futura-pt-book.woff2" as="font" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/style.min.css" />
 </head>
 
-<body>
-  <div class="site-container">
-    @include('partials/header.html')
-    <img src="img/cover.jpg" alt="Обложка" style="width: 100%;">
-    @include('partials/footer.html')
-    <!-- @include('html/h1.html') пример инклуда -->
-  </div>
-  <script src="js/vendor.js"></script>
-  <script src="js/main.js"></script>
+<body class="body-index">
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a class="header__logo" href="#">
+          <svg  width='190' height='43'>
+            <use href='img/sprite/sprite.svg#logo'></use>
+          </svg>
+        </a>
+
+        <nav class="header__nav">
+          <ul class="header__nav-menu">
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#lenta">О Лента</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#about">О проекте</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#rules">Условия</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#apply">Подать заявку</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#contacts">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header__lang-select select">
+          <div class="select__header">
+            <span class="select__current">Eng</span>
+          </div>
+
+          <div class="select__body">
+            <div class="select__item">Eng</div>
+            <div class="select__item">Ru</div>
+          </div>
+        </div>
+
+        <button class="burger-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="mobile-menu">
+          <ul class="header__nav-menu">
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#lenta">О Лента</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#about">О проекте</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#rules">Условия</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#apply">Подать заявку</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#contacts">Контакты</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="first">
+      <div class="container">
+        <div class="first__inner">
+          <h1 class="title"><span>Первый международный акселератор</span> инновационных продуктов питания в «Лента»</h1>
+        </div>
+      </div>
+    </section>
+
+    <section class="lenta section" id="lenta">
+      <div class="container">
+        <div class="lenta__inner inner">
+          <h2 class="subtitle">О Лента</h2>
+          <div class="description"><span>«Лента» (MOEX & LSE: LNTA) является крупнейшей сетью гипермаркетов в России и четвертой среди крупнейших розничных сетей страны по выручке</span></div>
+          <ul class="lenta__numbers">
+            <li class="lenta__numbers-item">
+              <div class="lenta__numbers-descr">Активных покупателей<br> по карте лояльности</div>
+              <div class="lenta__numbers-value">19 <span>млн/год</span></div>
+            </li>
+            <li class="lenta__numbers-item">
+              <div class="lenta__numbers-descr">Количество<br> гипермаркетов</div>
+              <div class="lenta__numbers-value">255</div>
+            </li>
+            <li class="lenta__numbers-item">
+              <div class="lenta__numbers-descr">Общая площадь<br> магазинов</div>
+              <div class="lenta__numbers-value">1,7 <span>млн кв м</span></div>
+            </li>
+            <li class="lenta__numbers-item">
+              <div class="lenta__numbers-descr">Количество<br> распределительных центров</div>
+              <div class="lenta__numbers-value">14</div>
+            </li>
+            <li class="lenta__numbers-item">
+              <div class="lenta__numbers-descr">Количество<br> супермаркетов</div>
+              <div class="lenta__numbers-value">419</div>
+            </li>
+            <li class="lenta__numbers-item">
+              <div class="lenta__numbers-descr">География</div>
+              <div class="lenta__numbers-value">88 <span>городов</span></div>
+            </li>
+            <li class="lenta__numbers-item">
+              <div class="lenta__numbers-descr">Выручка в 2020</div>
+              <div class="lenta__numbers-value">445 <span>млрд руб</span></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="about section" id="about">
+      <div class="container">
+        <div class="about__inner inner">
+          <h2 class="subtitle">О проекте</h2>
+          <div class="description">Мы ищем <span>готовые инновационные продукты питания и напитки</span>, обладающие новыми потребительскими свойствами.</div>
+          <div class="about__lists">
+            <ul class="about__edge">
+              <li class="about__edge-item">Функциональная готовая еда</li>
+              <li class="about__edge-item">Функциональные и новые напитки</li>
+              <li class="about__edge-item">Растительная альтернатива животным продуктам</li>
+              <li class="about__edge-item">Ферментированная еда и напитки</li>
+              <li class="about__edge-item">Увеличение сроков годности за счет новых ингредиентов/технологий переработки/упаковки</li>
+              <li class="about__edge-item">Быстрые заменители еды</li>
+              <li class="about__edge-item">Экоупаковка</li>
+            </ul>
+            <ul class="about__edge">
+              <li class="about__edge-item">Sugarfree продукты и замена сахара</li>
+              <li class="about__edge-item">Конструкторы еды</li>
+              <li class="about__edge-item">Ферментированные ингредиенты</li>
+              <li class="about__edge-item">Ингредиенты суперфуды</li>
+              <li class="about__edge-item">Персонализированное питание</li>
+              <li class="about__edge-item">Генные технологии</li>
+              <li class="about__edge-item">Датчики в упаковке</li>
+              <li class="about__edge-item">И многое другое</li>
+            </ul>
+          </div>
+          <div class="description">Для инновационных продуктов, обладающих наибольшим потенциалом, на тестовый период будет выделено место для выкладки с соответствующей коммуникацией.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="rules section" id="rules">
+      <div class="container">
+        <div class="rules__inner inner">
+          <h2 class="subtitle">Условия</h2>
+          <ul class="rules__list">
+            <li class="rules__item">
+              <svg class="rules__item-svg" width='122' height='122'>
+                <use href='img/sprite/sprite.svg#sweet'></use>
+              </svg>
+              <div class="rules__item-descr">Товары с уникальной рецептурой или инновационной упаковкой, которые не представлены в федеральных торговых сетях РФ. </div>
+            </li>
+            <li class="rules__item">
+              <svg class="rules__item-svg" width='122' height='122'>
+                <use href='img/sprite/sprite.svg#like'></use>
+              </svg>
+              <div class="rules__item-descr">Наличие документов, подтверждающих качество товаров и достаточные производственные мощности для серийного производства</div>
+            </li>
+            <li class="rules__item">
+              <svg class="rules__item-svg" width='122' height='122'>
+                <use href='img/sprite/sprite.svg#cart'></use>
+              </svg>
+              <div class="rules__item-descr">Готовность поставлять товар на склад “Лента” (для резидентов РФ) и осуществлять экспорт продукции в РФ (для нерезидентов РФ)</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="apply section" id="apply">
+      <div class="container">
+        <div class="apply__inner inner">
+          <form action="mail.php" enctype="multipart/form-data" class="apply__form form" method="POST">
+            <input type="hidden" name="admin_email[]" value="maxgraph23@gmail.com">
+            <input type="hidden" name="form_subject" value="Тема письма">
+            <h2 class="subtitle">Подать заявку</h2>
+            <div class="form__labels">
+              <label class="form__label">
+                <input type="text" name="surname" placeholder="Имя" class="form__input" data-validate-field="name">
+              </label>
+              <label class="form__label">
+                <input type="text" name="surname" placeholder="Фамилия" class="form__input" data-validate-field="surname">
+              </label>
+              <label class="form__label">
+                <input type="text" name="organizations" placeholder="Организация" class="form__input" data-validate-field="text">
+              </label>
+              <label class="form__label">
+                <input type="text" name="instagram" placeholder="Сайт или инстаграм" class="form__input" data-validate-field="instagram">
+              </label>
+              <label class="form__label">
+                <input type="email" name="email" placeholder="E-mail" class="form__input" class="form__input" data-validate-field="email">
+              </label>
+              <label class="form__label">
+                <input type="tel" name="tel" placeholder="Телефон" class="form__input" data-validate-field="tel">
+              </label>
+              <label class="form__label">
+                <input type="text" name="country" placeholder="Страна" class="form__input" data-validate-field="country">
+              </label>
+            </div>
+
+            <div class="form__quiz">
+              <div class="form__quiz-line">
+                <div class="form__quiz-question">Направлялось ли Вами ранее коммерческое предложение в Лента?</div>
+                <div class="form__quiz-answer">
+                  <label class="form__quiz-label">
+                    <input type="radio" class="form__quiz-input" name="choose" required>
+                    <span>Да</span>
+                  </label>
+                  <label class="form__quiz-label">
+                    <input type="radio" class="form__quiz-input" name="choose" required>
+                    <span>Нет</span>
+                  </label>
+                </div>
+              </div>
+              <div class="form__quiz-line">
+                <div class="form__quiz-question">Производство СТМ: </div>
+                <div class="form__quiz-answer">
+                  <label class="form__quiz-label">
+                    <input type="radio" class="form__quiz-input" name="choose1" required>
+                    <span>Да</span>
+                  </label>
+                  <label class="form__quiz-label">
+                    <input type="radio" class="form__quiz-input" name="choose1" required>
+                    <span>Нет</span>
+                  </label>
+                </div>
+              </div>
+              <div class="form__quiz-line">
+                <div class="form__quiz-question">Эксклюзив на 18 мес:</div>
+                <div class="form__quiz-answer">
+                  <label class="form__quiz-label">
+                    <input type="radio" class="form__quiz-input" name="choose2" required>
+                    <span>Да</span>
+                  </label>
+                  <label class="form__quiz-label">
+                    <input type="radio" class="form__quiz-input" name="choose2" required>
+                    <span>Нет</span>
+                  </label>
+                </div>
+              </div>
+              <div class="form__quiz-line">
+                <div class="form__quiz-question">Маркетинговая поддержка:</div>
+                <div class="form__quiz-answer">
+                  <label class="form__quiz-label">
+                    <input type="radio" class="form__quiz-input" name="choose3" required>
+                    <span>Да</span>
+                  </label>
+                  <label class="form__quiz-label">
+                    <input type="radio" class="form__quiz-input" name="choose3" required>
+                    <span>Нет</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form__upload">
+              <div class="form__item">
+                <div class="file">
+                  <div class="file__item">
+                    <input type="file" name="file" class="file__input" accept=".pdf, .jpg, .png, .ppt, .doc, .xls" id="upload" multiple>
+                    <div class="file__btn"></div>
+                    <div class="file__preview" id="formPreview">
+
+                    </div>
+                  </div>
+                </div>
+                <div class="form__label-test form__upload-descr">Прикрепить презентацию и прайс-лист (форматы: pdf, jpg, png, ppt, doc, xls. Не больше 30мб, количеством не более 20 файлов)</div>
+              </div>
+            </div>
+
+            <div class="form__descr">Готовность предоставить эксклюзив на 18 месяцев, обеспечить маркетинговую поддержку или поставлять продукцию под СТМ “Лента” будет являться существенным фактором при выборе поставщика
+            </div>
+
+            <label class="form__label-confirm">
+              <input class="form__input-confirm" type="checkbox" onchange="document.getElementById('submit').disabled = !this.checked;">
+              <div class="form__confirm-terms">Нажимая кнопку «Отправить», я даю свое согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных в <button data-path="policy" data-animation="fade" data-speed="300" type="button">Политике обработки персональных данных</button></div>
+            </label>
+            <button class="form__btn" disabled type="submit" id="submit" data-path="confirm" data-animation="fade" data-speed="300" type="button">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer section" id="contacts">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__inner-left">
+          <a class="footer__logo" href="https://lenta.com/" target="_blank">
+            <svg  width='256' height='59'>
+              <use href='img/sprite/sprite.svg#logo_white'></use>
+            </svg>
+          </a>
+          <ul class="footer__soclials">
+            <li class="footer__socials-item">
+              <a href="https://vk.com/lentacom" class="footer__socials-link" target="_blank">
+                <svg  width='27' height='27'>
+                  <use href='img/sprite/sprite.svg#vk'></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer__socials-item">
+              <a href="https://www.facebook.com/lentacom/" class="footer__socials-link" target="_blank">
+                <svg  width='27' height='27'>
+                <use href='img/sprite/sprite.svg#facebook'></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer__socials-item">
+              <a href="https://www.instagram.com/lenta_com/" class="footer__socials-link" target="_blank">
+                <svg  width='27' height='27'>
+                <use href='img/sprite/sprite.svg#instagram'></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer__socials-item">
+              <a href="" class="footer__socials-link" target="_blank">
+                <svg  width='27' height='27'>
+                <use href='img/sprite/sprite.svg#odnoklassniki'></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer__socials-item">
+              <a href="https://t.me/Lentacom" class="footer__socials-link" target="_blank">
+                <svg  width='27' height='27'>
+                <use href='img/sprite/sprite.svg#telegram'></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer__socials-item">
+              <a href="https://invite.viber.com/?g2=AQA8MH%2BiaXsQzkoCUpQzZbVidt8vkFf07ZsJYZsJlmQPU5OR1fsm0AyhQHKcc3xt&lang=ru" class="footer__socials-link" target="_blank">
+                <svg  width='27' height='27'>
+                <use href='img/sprite/sprite.svg#viber'></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+          <ul class="footer__left-list">
+            <li class="footer__left-item">
+              <a class="footer__item-link" href="http://www.lentainvestor.com/en/" target="_blank">Сайт Лента для инвесторов</a>
+            </li>
+            <li class="footer__left-item">
+              <a class="footer__item-link" href="Рекламные возможности “Лента” 2021.pdf" target="_blank" download="./Рекламные возможности “Лента” 2021.pdf">
+                <img class="footer__folder-img footer__folder-img--animated" src="img/sprite/folder.svg" alt="folder">
+                <span>“Рекламные возможности “Лента” 2021”</span>
+              </a>
+            </li>
+            <li class="footer__left-item">
+              <a class="footer__item-link" href="Маркетинговые опции для поставщиков “Лента” 2022.pdf" target="_blank" download="./Маркетинговые опции для поставщиков “Лента” 2022.pdf">
+                <img class="footer__folder-img footer__folder-img--animated" src="img/sprite/folder.svg" alt="folder">
+                <span>“Маркетинговые опции для поставщиков “Лента” 2022”</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__inner-mid">
+          <div class="footer__mid-title">Bestseller Group:</div>
+          <ul class="footer__mid-list">
+            <li class="footer__mid-item">
+              <a class="footer__item-link" href="about.FoodTechShelf.com" target="_blank">О проекте FoodTech Shelf</a>
+            </li>
+            <li class="footer__mid-item">
+              <a class="footer__item-link" href="partner.foodtechshelf.com" target="_blank">Стать партнером проекта FoodTech Shelf</a>
+            </li>
+            <li class="footer__mid-item">
+              <a class="footer__item-link" href="foodtechshelf.com" target="_blank">Торговая платформа FoodTech Shelf</a>
+            </li>
+            <li class="footer__mid-item">
+              <a class="footer__item-link" href="https://www.bestseller.company/" target="_blank">Сайт Bestseller Group</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__inner-right">
+          В ходе взаимодействия со стартапами со стороны Bestseller Group может быть оказано содействие в анализе спроса, логистике, сертификации, локализации, кастомизации, финансировании и масштабировании производства.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal">
+		<div class="modal__container-confirm modal__container" data-target="confirm">
+			<div class="modal__confirm">
+        <div class="modal__close modal-close">&times;</div>
+        <svg class="modal__content-checked" width='75' height='75'>
+          <use href='img/sprite/sprite.svg#checked'></use>
+        </svg>
+				<div class="modal__text">Ваша заявка принята!</div>
+			</div>
+		</div>
+
+    <div class="modal__container" data-target="policy">
+			<div class="modal__policy">
+        <div class="modal__close modal-close">&times;</div>
+				<div class="modal__policy-title">Политика обработки персональных данных</div>
+        <div class="modal__policy-inner">
+            <ul class="modal__policy-list">
+              <li>1. Общие положения</li>
+              <li>1.1 ООО Бестселлер Маркет (далее по тексту Оператор) ставит соблюдение прав и свобод граждан одним из важнейших условий осуществления своей деятельности.</li>
+              <li>1.2 Политика Оператора в отношении обработки персональных данных (далее по тексту Политика) применяется ко всей информации, которую Оператор может получить о посетителях веб-сайта <a href="foodtechshelf.com">foodtechshelf.com</a> Персональные данные обрабатывается в соответствии с ФЗ О персональных данных № 152-ФЗ.</li>
+            </ul>
+            <ul class="modal__policy-list">
+              <li>2. Основные понятия, используемые в Политике:</li>
+              <li>2.1 Веб-сайт - совокупность графических и информационных материалов, а также программ для ЭВМ и баз данных, обеспечивающих их доступность в сети интернет по сетевому адресу <a href="foodtechshelf.com">foodtechshelf.com;</a></li>
+              <li>2.2 Пользователь любой посетитель веб-сайта <a href="foodtechshelf.com">foodtechshelf.com;</a></li>
+              <li>2.3 Персональные данные любая информация, относящаяся к Пользователю веб-сайта <a href="foodtechshelf.com">foodtechshelf.com;</a></li>
+              <li>2.4 Обработка персональных данных - любое действие с персональными данными, совершаемые с использованием ЭВМ, равно как и без их использования;</li>
+              <li>2.5 Обезличивание персональных данных действия, результатом которых является невозможность без использования дополнительной информации определить принадлежность персональных данных конкретному Пользователю или лицу;</li>
+              <li>2.6 Распространение персональных данных любые действия, результатом которых является раскрытие персональных данных неопределенному кругу лиц;</li>
+              <li>2.7 Предоставление персональных данных любые действия, результатом которых является раскрытие персональных данных определенному кругу лиц;</li>
+              <li>2.8 Уничтожение персональных данных любые действия, результатом которых является безвозвратное уничтожение персональных на ЭВМ или любых других носителях.</li>
+            </ul>
+            <ul class="modal__policy-list">
+              <li>3. Оператор может обрабатывать следующие персональные данные:</li>
+              <li>3.1 Адрес электронной почты Пользователя</li>
+              <li>3.2 Номер телефона Пользователя</li>
+              <li>3.3. Фамилию, имя, отчество Пользователя</li>
+              <li>3.4. Также на сайте происходит сбор и обработка обезличенных данных о посетителях (в т.ч. файлов cookie) с помощью сервисов интернет-статистики (Яндекс Метрика и Гугл Аналитика и других).</li>
+            </ul>
+            <ul class="modal__policy-list">
+              <li>4. Цели обработки персональных данных</li>
+              <li>4.1 Цель обработки адреса электронной почты, номера телефона, фамилии, имени, отчества Пользователя - сбор данных по заявкам и дальнейшее взаимодействие по проекту FoodTechShelf. Также Оператор имеет право направлять Пользователю уведомления о новых продуктах и услугах, специальных предложениях и различных событиях. Пользователь всегда может отказаться от получения информационных сообщений, направив Оператору письмо на адрес <a href="maito:hello@zozh.shop">hello@zozh.shop</a></li>
+              <li>4.2 Обезличенные данные Пользователей, собираемые с помощью сервисов интернет-статистики, служат для сбора информации о действиях Пользователей на сайте, улучшения качества сайта и его содержания.</li>
+            </ul>
+            <ul class="modal__policy-list">
+              <li>5. Правовые основания обработки персональных данных</li>
+              <li>5.1 Оператор обрабатывает персональные данные Пользователя только в случае их отправки Пользователем через формы, расположенные на сайте <a href="foodtechshelf.com">foodtechshelf.com.</a> Отправляя свои персональные данные Оператору, Пользователь выражает свое согласие с данной Политикой.</li>
+              <li>5.2 Оператор обрабатывает обезличенные данные о Пользователе в случае, если это разрешено в настройках браузера Пользователя (включено сохранение файлов cookie и использование технологии JavaScript).
+              </li>
+            </ul>
+            <ul class="modal__policy-list">
+              <li>6. Порядок сбора, хранения, передачи и других видов обработки персональных данных</li>
+              <li>6.1 Оператор обеспечивает сохранность персональных данных и принимает все возможные меры, исключающие доступ к персональным данным неуполномоченных лиц.</li>
+              <li>6.2 Персональные данные Пользователя никогда, ни при каких условиях не будут переданы третьим лицам, за исключением случаев, связанных с исполнением действующего законодательства.</li>
+              <li>6.3 В случае выявления неточностей в персональных данных, Пользователь может актуализировать их, направив Оператору уведомление с помощью электронной почты на электронный адрес Оператора <a href="maito:hello@zozh.shop">hello@zozh.shop</a> с пометкой "Актуализация персональных данных"</li>
+              <li>6.4 Срок обработки персональных данных является неограниченным. Пользователь может в любой момент отозвать свое согласие на обработку персональных данных, направив Оператору уведомление с помощью электронной почты на электронный адрес Оператора <a href="maito:hello@zozh.shop">hello@zozh.shop</a> с пометкой "Отзыв согласия на обработку персональных данных"</li>
+            </ul>
+            <ul class="modal__policy-list">
+              <li>7. Заключительные положения</li>
+              <li>7.1. Пользователь может получить любые разъяснения по интересующим вопросам, касающимся обработки его персональных данных, обратившись к Оператору с помощью электронной почты <a href="maito:hello@zozh.shop">hello@zozh.shop</a></li>
+              <li> 7.2. В данном документе будут отражены любые изменения политики обработки персональных данных Оператором. В случае существенных изменений Пользователю может быть выслана информация на указанный им электронный адрес.
+              </li>
+            </ul>
+        </div>
+			</div>
+		</div>
+	</div>
+
+  <script src="js/inputmask.min.js"></script>
+  <script src="js/just-validate.min.js"></script>
+  <script src="js/common.min.js"></script>
 </body>
 
 </html>
