@@ -111,6 +111,10 @@
   .form__confirm-terms {
     font-size: 17px;
   }
+
+  .modal__container-confirm {
+    width: 350px;
+  }
 }
 
 @media (min-width: 576px) and (max-width: 768px) {
@@ -553,6 +557,14 @@
     button {
       display: contents;
     }
+  }
+
+  .form__item {
+    align-items: center;
+  }
+
+  .form__upload-descr {
+    max-width: 75%;
   }
 }
 
