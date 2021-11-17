@@ -303,7 +303,7 @@ formUpload.addEventListener('change', () => {
       return;
     }
 
-    if (file.length > 2) {
+    if (file.length > 20) {
       alert(`Only 20 files are allowed to upload.`);
       return;
     }
