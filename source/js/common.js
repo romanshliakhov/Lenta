@@ -298,19 +298,15 @@ formUpload.addEventListener('change', () => {
       return;
     }
 
-    if (file.size > 2 * 1024 * 1024 ) {
+    if (file.size > 15 * 1024 * 1024 ) {
       alert('Файлы не более 30мб');
       return;
     }
-
-    console.log('test1');
 
     if (file.length > 2) {
       alert(`Only 20 files are allowed to upload.`);
       return;
     }
-
-    console.log('test2');
 
     let reader = new FileReader();
 
