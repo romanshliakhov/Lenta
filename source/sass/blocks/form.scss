@@ -185,9 +185,23 @@
 }
 
 .file__preview {
-  display: inline-block;
-  max-width: 100%;
-  padding: 10px 0px 0px 0px;
+  // display: inline-block;
+  // background-color: #fff;
+  // padding: 16px 10px;
+  // border-radius: 4px;
+  // font-size: 18px;
+  // line-height: 24px;
+  // color: #606060;
+
+  img {
+    padding: 10px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 43px;
+  }
 }
 
 .file__btn {
