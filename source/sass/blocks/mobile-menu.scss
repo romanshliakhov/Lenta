@@ -37,13 +37,15 @@
   top: 118px;
   right: 0;
   width: 398px;
-  min-height: 589px;
+  height: 589px;
   background-color: #fff;
   transform: translateX(100%);
 	transition: transform 0.5s;
+  opacity: 0;
 
   &.active {
     transform: translateX(0);
+    opacity: 1;
   }
 
   .header__nav-menu {

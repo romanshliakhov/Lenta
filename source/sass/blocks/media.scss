@@ -313,7 +313,8 @@
   }
 
   .mobile-menu.active {
-    height: 567px;
+    height: 582px;
+    opacity: 1;
   }
 
   .form__confirm-terms {
@@ -349,7 +350,7 @@
   .title {
     font-size: 30px;
     line-height: 42px;
-    max-width: 100%;
+    max-width: 298px;
     margin: 0 auto;
   }
 
@@ -568,7 +569,11 @@
   }
 
   .mobile-menu.active {
-    height: 347px;
+    transition: initial;
+    transition: transform 0.5s,-webkit-transform 0.5s;
+    height: 442px;
+    top: 98px;
+    opacity: 1;
   }
 
   .form__confirm-terms {
