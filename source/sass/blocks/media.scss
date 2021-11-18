@@ -347,8 +347,8 @@
   }
 
   .title {
-    font-size: 48px;
-    line-height: 62px;
+    font-size: 30px;
+    line-height: 42px;
     max-width: 100%;
     margin: 0 auto;
   }
@@ -356,6 +356,10 @@
   .description {
     font-size: 18px;
     line-height: 22px;
+  }
+
+  .header {
+    padding: 25px 0;
   }
 
   .inner {
@@ -373,9 +377,8 @@
   }
 
   .first {
-    padding: 193px 0 80px;
+    padding: 165px 0 80px;
     text-align: center;
-    font-size: 48px;
   }
 
   .first__inner::after {
