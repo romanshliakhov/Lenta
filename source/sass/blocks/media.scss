@@ -476,6 +476,7 @@
 
   .form__quiz-line {
     height: auto;
+    align-items: flex-end;
   }
 
   .form__upload {
@@ -489,7 +490,12 @@
   }
 
   .form__quiz-answer {
-    min-width: 107px;
+    min-width: 115px;
+    white-space: nowrap;
+
+    .form__quiz-label + .form__quiz-label {
+      margin-left: 5px;
+    }
   }
 
   .form__descr {
@@ -586,7 +592,7 @@
 
   .form__item {
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
   }
 
   .form__upload-descr {

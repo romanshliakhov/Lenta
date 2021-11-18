@@ -1,4 +1,6 @@
 .form {
+  -webkit-appearance: none;
+  
   &__labels {
     display: flex;
     flex-wrap: wrap;
@@ -167,6 +169,11 @@
   width: 100%;
 }
 
+.file {
+  display: flex;
+  align-items: center;
+}
+
 .file__item {
   position: relative;
 }
@@ -211,22 +218,5 @@
   width: 48px;
   background-color: #FFC107;
   border-radius: 50%;
-
-  animation: beat 1.5s ease infinite;
-
-
-  @keyframes beat {
-    from {
-      transform: scale(1);
-    }
-
-    50% {
-      transform: scale(1.2);
-    }
-
-    to {
-      transform: scale(1);
-    }
-  }
 }
 
